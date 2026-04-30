@@ -1,2 +1,2 @@
 [deploy]
-startCommand = "php artisan migrate --force && /start-container.sh"
+startCommand = "php artisan migrate --force || true && php artisan config:cache && /start-container.sh"
